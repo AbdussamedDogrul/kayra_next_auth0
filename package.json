@@ -2,11 +2,13 @@
   "name": "kayra_next_auth0",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+"scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "env:check": "node -e \"require('./src/lib/env-validation.ts').validateRequiredEnvVars()\"",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^4.6.1",

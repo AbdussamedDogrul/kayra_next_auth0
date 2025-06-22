@@ -15,11 +15,11 @@ export function UserInfo({ user, showImage = false }: UserInfoProps) {
       {showImage && user.image && (
         <div className="mt-2">
           <strong>Profil Fotoğrafı:</strong>
-          <img 
+          {/* <img 
             src={user.image} 
             alt="Profile" 
             className="w-16 h-16 rounded-full mt-2"
-          />
+          /> */}
         </div>
       )}
     </div>

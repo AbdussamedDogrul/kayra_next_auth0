@@ -21,12 +21,14 @@ export default function Profile() {
             <p className="text-gray-600"><strong>Email:</strong> {user?.email}</p>
             {user?.image && (
               <div className="mt-4">
-                <strong className="block mb-2">Profil Fotoğrafı:</strong>
-                <img 
+                {/* <strong className="block mb-2">Profil Fotoğrafı:</strong> */}
+                {/* <strong>Profil Fotoğrafı:</strong> */}
+                <strong>Profil Fotoğrafı:</strong>
+                {/* <img 
                   src={user.image} 
                   alt="Profile" 
                   className="w-16 h-16 rounded-full border-2 border-gray-200"
-                />
+                /> */}
               </div>
             )}
           </div>
@@ -45,7 +47,7 @@ export default function Profile() {
             href="/dashboard" 
             className="block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 px-4 rounded transition-colors"
           >
-            Dashboard'a Git
+            Dashboarda Git
           </Link>
           
           <Link 
