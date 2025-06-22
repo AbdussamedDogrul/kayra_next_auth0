@@ -14,7 +14,7 @@ export function UserInfo({ user, showImage = false }: UserInfoProps) {
       
       {showImage && user.image && (
         <div className="mt-2">
-          <strong>Profil Fotoğrafı:</strong>
+          {/* <strong>Profil Fotoğrafı:</strong> */}
           {/* <img 
             src={user.image} 
             alt="Profile" 

@@ -14,7 +14,17 @@ export default function Home() {
     setMounted(true)
   }, [])
 
-  if (!mounted || isLoading) return <LoadingSpinner />
+  // Hydration hatası için önce basit loading göster
+  if (!mounted) {
+    return (
+      <div className="text-center mt-10">
+        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        <p className="mt-2 text-gray-600">Yükleniyor...</p>
+      </div>
+    )
+  }
+
+  if (isLoading) return <LoadingSpinner />
 
   // Giriş yapmış kullanıcı için Dashboard
   if (isAuthenticated && user) {
@@ -236,12 +246,12 @@ export default function Home() {
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300"></div>
               </div>
-              {/* <div className="relative flex justify-center text-sm">
+              <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-white text-gray-500">veya</span>
-              </div> */}
+              </div>
             </div>
 
-            {/* <button 
+            <button 
               onClick={() => signIn('auth0')}
               className="w-full bg-white hover:bg-gray-50 text-gray-700 py-3 px-4 rounded-lg font-medium border border-gray-300 transition-colors flex items-center justify-center space-x-2"
             >
@@ -252,7 +262,7 @@ export default function Home() {
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
               </svg>
               <span>Google ile Devam Et</span>
-            </button> */}
+            </button>
           </div>
 
           {/* Footer */}
