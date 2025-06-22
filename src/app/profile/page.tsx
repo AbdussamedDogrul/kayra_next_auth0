@@ -21,9 +21,8 @@ export default function Profile() {
             <p className="text-gray-600"><strong>Email:</strong> {user?.email}</p>
             {user?.image && (
               <div className="mt-4">
-                {/* <strong className="block mb-2">Profil Fotoğrafı:</strong> */}
+            
                 {/* <strong>Profil Fotoğrafı:</strong> */}
-                <strong>Profil Fotoğrafı:</strong>
                 {/* <img 
                   src={user.image} 
                   alt="Profile" 
