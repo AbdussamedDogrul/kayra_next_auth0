@@ -265,7 +265,7 @@ export default function Home() {
 
         {/* Alt Bilgi */}
         <div className="text-center mt-6 text-sm text-gray-500">
-          © 2024 Kayra Auth. Güvenli kimlik sistemi.
+          © 2025 Kayra Auth. Güvenli kimlik sistemi.
         </div>
       </div>
     </div>
